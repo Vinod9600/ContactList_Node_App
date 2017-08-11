@@ -15,7 +15,7 @@ app.use(bodyparser.urlencoded({ extended: true })); // for parsing application/x
 const route = require('./routes/route');
 
 //connect to mongodb
-mongoose.connect('mongodb://localhost:27017/contactlist');
+mongoose.connect('mongodb://vinod9600:Abcd@9762@contactlist-shard-00-00-26xeg.mongodb.net:27017,contactlist-shard-00-01-26xeg.mongodb.net:27017,contactlist-shard-00-02-26xeg.mongodb.net:27017/contactlist?ssl=true&replicaSet=ContactList-shard-0&authSource=admin');
 
 mongoose.connection.on('connected',()=>{
     console.log('connected to database mongodb @ 27017'); 
